@@ -12,6 +12,7 @@ import QuestoesLayout from './components/criar_questoes_quiz/QuestoesLayout';
 import PerfilAluno from './components/perfil/PerfilAluno';
 import ConteudoAlunoLayout from './components/conteudo_aluno/ConteudoAlunoLayout';
 import SobreMain from './components/sobre_projeto/SobreMain';
+import CriarConteudoProfessor from './components/conteudo_professor/CriarConteudoProfessor'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route index element={<InicioLayout />} />
           <Route path='criar_conto' element={<CriaContaLayout />} />
           <Route path='conteudo_professor' element={<ConteudoProfessorLayout />} />
+          <Route path='Criar_conteudo_professor' element={<CriarConteudoProfessor />} />
           <Route path='cria_quiz' element={<CriaQuizLayout />} />
           <Route path='quizzes' element={<QuizzesLayout />} />
           <Route path='tela_realizar_quiz' element={<RealizaQuizLayout />} />
