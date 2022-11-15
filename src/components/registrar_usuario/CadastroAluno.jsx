@@ -1,14 +1,14 @@
-import PerfilAluno from "../perfil/PerfilAluno";
+import { useNavigate } from "react-router-dom";
 
 export default function CadastroAluno({setIsStudent}) {
+    const navigate = useNavigate();
+    
     function closeModal() {
         setIsStudent(false);
     }
 
-    function handleNewUser() {
-        return (
-            <></>
-        )
+    function handleNewUser(e) {
+        e.preventDefault();
     }
 
     return(
@@ -48,7 +48,7 @@ export default function CadastroAluno({setIsStudent}) {
                         </form>
                     </div>
                     <div className="modal-footer teacher-modal-footer">
-                        <button type="submit" className="btn btn-success">Cadastrar</button>
+                        <button type="submit" className="btn btn-success" onClick={() => navigate("/perfil_aluno")}>Cadastrar</button>
                         <a href="#">Já tem uma conta? Faça login!!</a>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import '../../css/perfil_aluno.css';
+import BotaoInfo from './BotaoInfo';
 
 export default function InfoAluno() {
     const data = {
@@ -30,12 +31,8 @@ export default function InfoAluno() {
                         </div>
                     </div>
                     <div className="col-sm-4 ">
-                        <div>
-                            <button className="btn_aluno"><a href='#'>Criar Projeto</a></button>
-                        </div>
-                        <div>
-                            <button className="btn_aluno"><a href='#'>Favoritos</a></button>
-                        </div>
+                        <BotaoInfo buttonText="Criar Historinha" />
+                        <BotaoInfo buttonText="Veja Mais Historinhas" />
                     </div>
                 </div>
             </div>
