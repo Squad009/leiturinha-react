@@ -8,8 +8,8 @@ class PostagemRecenteProfessor extends Component {
     render() {
         return(
         <section>
-            <h2 className="title_font ms-3 mt-5 text_app_secondary">Conteúdo de professores mais recentes...</h2>
             <hr className="border-primary border-3 opacity-75" />
+            <h2 className="title_font ms-3 mt-5 text_app_secondary">Conteúdo de professores mais recentes...</h2>
             <Link to="conteudo-professor" className="text-link" style={{float: "right", marginRight: "2rem"}}>Mais...</Link>
             <div className="bg-light py-5">
                 <div className="container">

@@ -24,8 +24,8 @@ class UltimasHistorias extends Component {
 
         return(
             <section>
-                <h2 className="title_font ms-3 mt-5 text_app_secondary">Últimas historinhas adicionadas...</h2>
                 <hr className="border-primary border-3 opacity-75" />
+                <h2 className="title_font ms-3 mt-5 text_app_secondary">Últimas historinhas adicionadas...</h2>
                 <a href="#" className="text-link" style={{float: "right", marginRight: "2rem"}}>Mais...</a>
                 <div className="album py-5 bg-light">
                     <div className="container">

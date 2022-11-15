@@ -1,25 +1,21 @@
-import Authentication from './header/Authentication';
-import SearchMain from './header/SearchMain';
-import NavigationMain from './header/NavigationMain';
 
-
-function HeaderApp({setRegisterButton}) {
+function HeaderApp(props) {
 
     return(
         <header className="p-2 text-white">
             <div className="container">
                 <nav className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <NavigationMain />
+                   {/*  <NavigationMain />
 
                     <SearchMain />
 
-                    <Authentication setRegisterButton={setRegisterButton} />
+                    <Authentication setRegisterButton={setRegisterButton} /> */}
                     
-                    {/* {this.props.navigationMain}
+                    {props.navigationMain}
 
-                    {this.props.searchMain}
+                    {props.searchMain}
 
-                    {this.props.authentication} */}
+                    {props.authentication} 
                 </nav>
             </div>
         </header>
