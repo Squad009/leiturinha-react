@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import ComentarioForm from '../../shared/ComentarioForm';
 
 
 
@@ -8,9 +9,9 @@ class ConteudoProfessorComentarios extends Component{
 
         return(
             <section className="comentarios">
-                <div className="d-flex justify-content-between mb-3">
+                <div className="mb-3 d-flex flex-column mx-5">
                     <h2 className="p-3">Comentários do Conteúdo</h2>
-                    <button className="btn button_app_secondary m-3">Comentar</button>
+                    <ComentarioForm />
                 </div>
                 <div className="ms-5">
                     <h5><strong>João da Silva:</strong></h5>
