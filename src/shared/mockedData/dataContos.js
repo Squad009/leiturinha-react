@@ -3,14 +3,14 @@ const dataUltimasLeituras = [
         idConto: 0,
         tituloConto: "Coraline",
         categoria: "Suspense",
-        imagem: 'https://picsum.photos/200',
+        imagem: '../imgLeiturinha/coraline.jpg',
         estudante: "Patrick André"
     },
     {
         idConto: 1,
         tituloConto: "Harry Potter e a Pedra Filosofal",
         categoria: "Aventura",
-        imagem: 'https://picsum.photos/200',
+        imagem: '../imgLeiturinha/harry-potter-e-a-pedra-filosofal.jpg',
         estudante: "Graziela"
     },
 ]
@@ -20,21 +20,21 @@ const dataRecomendados = [
         idConto: 0,
         tituloConto: "Da Minha Janela",
         categoria: "Romance",
-        imagem: 'https://picsum.photos/200',
+        imagem: '../imgLeiturinha/daminhajanela.jpg',
         estudante: "Cristiano"
     },
     {
         idConto: 1,
         tituloConto: "Alice no País das Maravilhas",
         categoria: "Aventura",
-        imagem: 'https://picsum.photos/200',
+        imagem: '../imgLeiturinha/alicenopaisdasmaravilhas.jpg',
         estudante: "Letícia"
     },
     {
         idConto: 2,
-        tituloConto: "O Mágico de Oz",
+        tituloConto: "O Pequeno Príncipe",
         categoria: "Aventura",
-        imagem: 'https://picsum.photos/200',
+        imagem: '../imgLeiturinha/pequeno-principe.jpg',
         estudante: "Bruna"
     }
 ]

@@ -1,6 +1,7 @@
 import InfoAluno from "./InfoAluno";
 import HeaderApp from "../../shared/HeaderApp";
 import UltimasLeituras from "./UltimasLeituras";
+import Footer from "../../shared/footer/Footer"
 
 export default function PerfilAluno() {
     return(
@@ -8,6 +9,7 @@ export default function PerfilAluno() {
             <HeaderApp />
             <InfoAluno />
             <UltimasLeituras />
+            <Footer />
         </>
     )
 }
