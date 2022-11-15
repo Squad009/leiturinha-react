@@ -1,0 +1,71 @@
+/* General - Para todos os estilos da pasta */
+
+.modal {
+    display: flex;
+    justify-content: center;
+}
+
+.close {
+    border: none;
+    background-color: transparent;
+}
+/* Tela Cadastro */
+
+.modal-title {
+    color: #1E4DD9;
+}
+
+/* Cadastro do Professor e do estudante */
+
+.teacher-modal-title {
+    color: #f2622e;
+    font-weight: bold;
+}
+.teacher-modal {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px rgba(0,0,0,0.4);
+}
+
+.teacher-modal-content {
+    width: 100%;
+    height: 80vh;
+}
+
+.teacher-modal-content label {
+    margin: 15px 0;
+}
+
+.teacher-modal-header {
+    margin-top: 5px;
+    height: 5%;
+    border-bottom: none;
+}
+
+.teacher-modal-body {
+    height: 60%;
+}
+
+.teacher-modal-footer {
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    border-top: none;
+}
+
+.teacher-modal-footer a {
+    color: #1E4DD9;
+}
+
+@media screen and (max-width: 566px) {
+    .teacher-modal-content{
+        height: 100vh;
+    }
+  }

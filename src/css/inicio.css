@@ -1,0 +1,28 @@
+
+body {
+    overflow-x: initial;
+}
+
+.animacao-bt {
+    position: relative;
+    left: 50%;
+    transform: translate(-70%);
+    animation-name: bt-move-direita;
+    animation: bt-move-direita 6s;
+}
+
+@keyframes bt-move-direita {
+    from {
+        left: 0;
+        transform: rotate(145deg);   
+        
+    }
+    to {
+        left: 50%;
+        transform: translate(-70%);
+      
+    }
+}
+
+
+

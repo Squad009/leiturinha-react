@@ -1,0 +1,65 @@
+@import url('../css/style.css');
+
+.grid_conteudo_conto {
+    display: grid;
+    grid-template-areas: "principal nav_lateral"
+                         "comentarios comentarios";
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 2rem 0;
+}
+
+.principal {
+    grid-area: principal;
+    height: 100%;
+    border-right: 2px solid black;
+}
+.informacao_conto{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnCurtir button{
+    background-color: #1E4DD9;
+}
+
+.nav_lateral {
+    grid-area: nav_lateral;
+}
+
+.comentarios {
+    grid-area: comentarios;
+    padding: auto;
+    width: 100%;
+    border-top: 1px solid black;
+    margin-top: 1rem;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    position: static;
+    bottom: 0;
+    left: 0;
+}
+@media screen and (max-width: 576px) {
+    .grid_conteudo_professor{
+        grid-template-areas: "principal"
+                            "comentarios";
+        grid-template-columns: auto;
+    }
+
+    .nav_lateral {
+        display: none;
+    }
+
+    .principal {
+        grid-area: principal;
+        height: 100%;
+        border: none;
+    }
+
+    .comentarios :nth-child(1n+1) {
+        margin-left: 0!important;
+    }
+}

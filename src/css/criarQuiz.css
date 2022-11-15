@@ -1,0 +1,28 @@
+@import url("style.css");
+
+.irCriar {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+body {
+    overflow-x: initial;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    color: black;
+}
+
+
+@media screen and (max-width: 524px) {
+    .contorno{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+  }

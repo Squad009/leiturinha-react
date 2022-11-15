@@ -1,0 +1,53 @@
+
+.fundo_criativo {
+    background-color: transparent;
+    margin: auto;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid;
+    box-shadow: 10px 20px #FFF;
+    
+    overflow: auto;
+    padding: 2rem 0;
+}
+
+.visualizacao_imagem {
+    border-radius: 5px;
+    max-width: 100%;
+    object-fit: scale-down;
+    border: 2px solid blueviolet;
+}
+
+.button_file {
+    white-space: normal;
+}
+
+.selecao_imagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   
+}
+
+.rotulo_campo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: rgba(0,0,0, .5);
+    border-radius: 5px;
+    padding: .3rem;
+    color: seashell;
+}
+
+.button_salvar {
+    max-width: 100%;
+    white-space: normal;
+}
+
+.imagem_info {
+    border-left: 8px solid #888888;
+    width: 80%;
+    height: 250px;
+    margin: 0 10%;
+    border-radius: 5px;
+}

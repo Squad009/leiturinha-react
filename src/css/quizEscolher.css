@@ -1,0 +1,97 @@
+/* estilo pagina escolher quiz*/
+@import url("style.css");
+
+main {
+    height: 100%;
+  }
+
+  .escolha{
+    display: flex;
+    justify-content: space-around;
+    
+    
+  
+  }
+  .op{
+    border-radius: 20px;
+    border-style: none;
+    background-image: linear-gradient(315deg, #F2D22E 25%, #F2622E 75%);
+    width: 100px;
+    height: 100px;
+    }
+
+    .op:hover{
+        background-image: linear-gradient(315deg, #4ff22e 25%, #2ef24f83 75%);
+    }
+   
+   
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  
+    a:hover {
+      color: white;
+      
+    }
+    
+    .op-list{
+      list-style-type: none;
+      padding: 0;
+    }
+    .op-list li{
+      font-size: 1rem;
+      margin: 1rem 0;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: bolder;
+    }
+    .op-list li label{
+      cursor: pointer;
+    }
+    
+  
+  /* fim - estilo pagina escolher quiz*/
+/* estilo pagina escolher quiz*/
+
+@media screen and (max-width: 991px) {
+    h2 {
+        font-size: small;
+        
+    }
+    .title-quiz {
+      font-size: medium;
+    }
+    .title-quiz {
+      font-size: medium;
+    }
+    .quiz-header {
+        padding: 0.2rem
+    }
+      
+      
+      .op-list{
+        list-style-type: none;
+        padding: 0;
+      }
+      .op-list li{
+        font-size: 1rem;
+        margin: 1rem 0;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bolder;
+      }
+      .op-list li label{
+        cursor: pointer;
+      }
+   
+  }
+  @media screen and (max-width: 524px) {
+    .escolha{
+        padding: 1rem 0rem 1rem 2rem ;
+    }
+  }
+
+  
+  
+  /* estilo pagina escolher quiz*/
+  
+    
