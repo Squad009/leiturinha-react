@@ -1,3 +1,11 @@
+.card-sobre {
+    margin: 10px;
+}
+
+.card-sobre p {
+    line-height: 1.2;
+}
+
 .card_tamanho{
     height: 50rem;
 

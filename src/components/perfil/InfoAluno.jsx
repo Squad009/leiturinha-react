@@ -1,13 +1,19 @@
 import '../../css/perfil_aluno.css';
 import BotaoInfo from './BotaoInfo';
+import dataRegisteredUser from '../../shared/mockedData/dataUser';
 
 export default function InfoAluno() {
+    const date = new Date();
+    const day = date.getDate();
+    const month = date.getMonth();
+    const year = date.getFullYear();
+
     const data = {
-        studentName: "Paula Albuquerque",
+        studentName: dataRegisteredUser.length == 2 ? dataRegisteredUser[1].fullName : dataRegisteredUser[0].fullName ,
         studentCode: "45673",
-        dateOfBirth: "20/07/1985",
-        email: "paula.albuquerque@email.com",
-        dateNow: "10/11/2022"
+        dateOfBirth: dataRegisteredUser.length == 2 ? dataRegisteredUser[1].dateOfBirth : dataRegisteredUser[0].dateOfBirth,
+        email: dataRegisteredUser.length == 2 ? dataRegisteredUser[1].email : dataRegisteredUser[0].dateOfBirth,
+        dateNow: `${day}/${month}/${year}`
     }
 
     return(
@@ -22,7 +28,7 @@ export default function InfoAluno() {
                         <div className="row info-details">
                             <div className="col-6">
                                 <p>Código de estudante: {data.studentCode} </p>
-                                <p>Data de Nascimento: {data.dateOfBirth} </p>
+                                <p>Data de Nasc.: {data.dateOfBirth} </p>
                             </div>
                             <div className="col-6">
                                 <p>Email: {data.email} </p>

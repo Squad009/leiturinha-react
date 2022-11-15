@@ -5,7 +5,7 @@ export default function TituloPerfilAluno({ titulo }) {
                 {titulo}
             </h3>
             <p className="ver-mais">
-                <a href='#'>ver +</a>
+                <a href="/sobre_projeto">ver +</a>
             </p>
       </div>
     )

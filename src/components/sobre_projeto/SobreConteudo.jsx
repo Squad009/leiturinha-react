@@ -7,13 +7,13 @@ export default class SobreConteudo extends React.Component{
         return(
             <section className="container">
                 <div className="row justify-content-center">
-                    <div className="card text-white w-50" style={{backgroundColor : '#03A65A'}}>
+                    <div className="card card-sobre text-white w-50" style={{backgroundColor : '#03A65A'}}>
                         <h2 className="title_font">Bem vindo ao Leio, Logo Existo!</h2>
                     </div>
                 </div>
 
                 <div className="row">
-                    <div className="card text-white" style={{flex:2,backgroundColor : '#A62E7C'}}>
+                    <div className="card card-sobre text-white" style={{flex:2,backgroundColor : '#A62E7C'}}>
                         <div className="card-body">
                             <h2 className="title_font text-center">Conheça a iniciativa</h2>
 
@@ -28,7 +28,7 @@ export default class SobreConteudo extends React.Component{
                             </p>
                         </div>
                     </div>
-                    <div className="card text-white" style={{flex:2,backgroundColor : '#F2622E'}}>
+                    <div className="card card-sobre text-white" style={{flex:2,backgroundColor : '#F2622E'}}>
                         <div className="card-body">
                             <h2 class="title_font text-center ">Objetivo</h2>
                             <p>
@@ -44,7 +44,7 @@ export default class SobreConteudo extends React.Component{
                     </div>
                 </div>
                 <div className="row">
-                    <div className="card text-white" style={{flex:2,backgroundColor : '#F2D22E'}}>
+                    <div className="card card-sobre text-white" style={{flex:2,backgroundColor : '#F2D22E'}}>
                         <div className="card-body">
                             <h2 class="title_font text-center">Por quê ler?</h2>
                             <p>
@@ -59,7 +59,7 @@ export default class SobreConteudo extends React.Component{
                             </p>
                         </div>
                     </div>
-                    <div className="card text-white" style={{flex:2,backgroundColor : '#1E4DD9'}}>
+                    <div className="card card-sobre text-white" style={{flex:2,backgroundColor : '#1E4DD9'}}>
                         <div className="card-body">
                             <h2 class="title_font text-center">Projeto</h2>
                             <p>
@@ -72,7 +72,7 @@ export default class SobreConteudo extends React.Component{
                     </div>
                 </div>
                 <div className="row justify-content-center">
-                    <div className="card text-success w-75" style={{borderColor : '#03A65A'}}>
+                    <div className="card card-sobre text-success w-75" style={{borderColor : '#03A65A'}}>
                     <div className="card-body">
                             <h2 className="title_font text-center">Idealizadores</h2>
                             <p className="text-center">
