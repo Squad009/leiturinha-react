@@ -7,6 +7,10 @@
     display: grid;
 }
 
+.info-aluno {
+    line-height: 0.7;
+}
+
 .info-item {
     margin: 10px;
 }

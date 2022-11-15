@@ -12,7 +12,7 @@ export default function InfoAluno() {
         studentName: dataRegisteredUser.length == 2 ? dataRegisteredUser[1].fullName : dataRegisteredUser[0].fullName ,
         studentCode: "45673",
         dateOfBirth: dataRegisteredUser.length == 2 ? dataRegisteredUser[1].dateOfBirth : dataRegisteredUser[0].dateOfBirth,
-        email: dataRegisteredUser.length == 2 ? dataRegisteredUser[1].email : dataRegisteredUser[0].dateOfBirth,
+        email: dataRegisteredUser.length == 2 ? dataRegisteredUser[1].email : dataRegisteredUser[0].email,
         dateNow: `${day}/${month}/${year}`
     }
 
