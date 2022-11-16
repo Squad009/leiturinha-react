@@ -1,10 +1,25 @@
 import { Component } from 'react';
 import { Link } from 'react-router-dom';
+import MaterialService from '../../services/MaterialService';
+import PostagemProfessorItem from './PostagemProfessorItem';
 
 
 
 class PostagemRecenteProfessor extends Component {
 
+    constructor(props) {
+        super(props);
+        this.service = new MaterialService();
+        this.state = {
+            materiais: []
+        }
+    }
+
+    async componentDidMount() {
+        this.result = await this.service.list;
+        this.componentList = this.result.map(material => <PostagemProfessorItem key={material.id} material={material} />);
+        this.setState({materiais: this.componentList});
+    }
     render() {
         return(
         <section>
@@ -15,21 +30,8 @@ class PostagemRecenteProfessor extends Component {
                 <div className="container">
                     <div className="row justify-content-sm-around">
 
-                        <div className="card col-md-5 mb-5" style={{maxWidth: 540}}>
-                            <div className="row g-0">
-                                <div className="col-md-3" style={{height: 200}}>
-                                    <img src="img/extraordinario.jpg" height="100%" width="100%" alt="..." />
-                                </div>
-                                <div className="col-md-7">
-                                    <div className="card-body">
-                                        <h5 className="card-title">Compreensão de texto</h5>
-                                        <p className="card-text">Um estudo mais aprofundado sobre o tema.</p>
-                                        <Link to="conteudo_professor" className="btn button_app_secondary" role="button"
-                                            style={{padding: ".5rem!important", margin: "auto"}}>Acessar</Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {this.state.materiais}
+                        
                         <div className="card col-md-5 mb-5" style={{maxWidth: 540}}>
                             <div className="row g-0">
                                 <div className="col-md-3" style={{height: 200}}>

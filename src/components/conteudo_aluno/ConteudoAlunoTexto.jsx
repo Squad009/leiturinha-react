@@ -14,9 +14,8 @@ export default class ConteudoAlunoTexto extends React.Component{
 
     async componentDidMount() {
         this.result =  await this.service.findById(this.idParam);
-        this.setState({ conto: this.result })
-        console.log("CONTO", this.state.conto);
-            
+        this.setState({ conto: this.result });
+
     }
 
     render(){

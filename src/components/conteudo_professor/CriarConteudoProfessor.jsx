@@ -2,63 +2,92 @@ import Footer from '../../shared/footer/Footer';
 import Authentication from '../../shared/header/Authentication';
 import NavigationMain from '../../shared/header/NavigationMain';
 import HeaderApp from '../../shared/HeaderApp';
-import ConteudoProfessorMain from './ConteudoProfessorMain';
 import "../../css/criarConteudoProfessor.css";
-import { BiEraser } from 'react-icons/bi'
-import { BsFilterLeft } from 'react-icons/bs'
-import { BsFilterRight} from 'react-icons/bs'
-import { BsTextCenter} from 'react-icons/bs'
-import { BsTypeBold} from 'react-icons/bs'
-import { BsTypeItalic} from 'react-icons/bs'
+import { Component } from 'react';
+import Material from '../../models/Material';
+import MaterialService from '../../services/MaterialService';
 
 
 
 
 
-export default function CriarConteudoProfessor() {
+export default class CriarConteudoProfessor extends Component {
 
-    return(
-        <>
-            <HeaderApp navigationMain={<NavigationMain />} authentication={<Authentication />}/>
+    constructor(props) {
+        super(props);
+        this.service = new MaterialService();
 
+        this.state = {
+            inputImage: "",
+            srcImage: "",
+            inputTitulo: "",
+            inputConteudo: "",
+        }
+    }
 
-            <main>
-  <div className="container d-flex justify-content-center" >
-      <h1>Começe a criar!</h1></div>
+    render() {
 
-  <div className=" container d-flex  align-items-center justify-content-center " id="botoes">
-       <div className="btn " id="fontes">
-          <button className="btn" id="negrito"><i><BsTypeBold /></i></button>
-          <button className="btn" id="italico"><i><BsTypeItalic /></i></button>       </div>
-       <div className="btn  " id="alinhamento">
-          <button className="btn" id="esquerda"><i><BsFilterLeft /></i></button>
-          <button className="btn" id="centro"><i><BsTextCenter /></i></button>
-          <button className="btn" id="botao"><i><BsFilterRight /></i></button>
-       </div>
-       <div className="btn " id="transforma">
-          <button className="btn" id="botao"><i>A</i></button>
-          <button className="btn" id="botao"><i>a</i></button>
-          <button className="btn" id="botao"><i>Aa</i></button>
-       </div>
-       <div className="btn d-flex  align-items-center justify-content-center" id="apagar">
-          <button className="btn" id="apagarTexto"><i><BiEraser /></i></button>
-      </div>
-  </div>
- 
-  <div className="container d-flex  flex-column bd-highlight mb-1" id="caixaDeTexto">
-        <div className="p-2 bd-highlight">
-            <textarea id="titulo" placeholder="Seu título aqui..."></textarea>
-        </div>
-        <div className="p-2 bd-highlight">
-            <textarea id="texto" placeholder="Seu texto aqui..."></textarea>
-        </div>
-        <div>
-          <a href="" button className="btn button_app_primary mr-3"> Enviar </a>
-        </div>
-  </div>
-</main>
+            return(
+                <>
+                    <HeaderApp navigationMain={<NavigationMain />} authentication={<Authentication />}/>
+                    <main>
+                        
+                        <h1 className="container-fluid p-5 bg-light text-center fs-1 fw-bold mb-5">Publicar conteúdo</h1>
+                        <form onSubmit={e => this.salva(e)}>
+                            <div className="selecao_imagem">
+                                    <div>
+                                        <img className="visualizacao_imagem" alt="Imagem do usuário" src={this.state.srcImage}/>
+                                    </div>
+                                    <div>
+                                        <label htmlFor="formFileLg" className="form-label">Escolha uma imagem</label>
+                                        <input className="form-control form-control-lg mb-3" id="formFileLg" type="file"  onChange={(e) => this.mostraImagem(e)} required/>
+                                    </div>
+                            </div>
+                        
+                            <div className="container d-flex  flex-column bd-highlight mb-1" id="caixaDeTexto">
+                                    <div className="p-2 bd-highlight">
+                                        <input type="text" id="titulo" placeholder="Seu título aqui..."  onChange={(e) => this.setState({inputTitulo: e.target.value})} required></input>
+                                    </div>
+                                    <div className="p-2 bd-highlight">
+                                        <textarea className="p-2" id="texto" placeholder="Seu texto aqui..." onChange={(e) => this.setState({inputConteudo: e.target.value})} required></textarea>
+                                    </div>
+                                    <div>
+                                    <button type="submit" className="btn button_app_primary mr-3"> Enviar </button>
+                                    </div>
+                            </div>
+                        </form>
+                    </main>
 
-            <Footer />
-        </>
-    );
+                    <Footer />
+                </>
+            );
+
+    }
+
+    salva(e) {
+        e.preventDefault();
+
+        this.material = new Material(this.state.inputTitulo, this.state.inputConteudo, this.state.inputImage);
+        console.log("material", this.material);
+        this.service.save(this.material)
+            .then(res => {
+                 alert("Seus dados foram salvos com sucesso");
+                 window.open("http://localhost:3000/perfil_aluno", "_self");
+            });
+    }
+
+    mostraImagem(e) {
+        
+        this.image = e.target.files.item(0);
+
+        this.fr = new FileReader();
+        this.fr.readAsDataURL(this.image);
+
+        this.fr.onload = e => {
+            let file = e.target.result.replace("data:", "").replace(/^.+,/, "");
+            this.setState({ srcImage: `data:image/png;base64,${file}` });
+            this.setState({ inputImage: file });
+        }
+
+    }
 }

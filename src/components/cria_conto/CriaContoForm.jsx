@@ -78,7 +78,6 @@ class CriaContoForm extends Component {
     salvaConteudo(e) {
         if(this.camposSaoValidos()) {
             this.conto = new Conto(this.state.inputTitulo, this.state.inputConteudo, this.state.inputCategoria, this.state.inputImage);
-            console.log("conto", this.conto);
             this.service.save(this.conto)
                 .then(res => {
                      alert("Seus dados foram salvos com sucesso");

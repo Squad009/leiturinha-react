@@ -15,9 +15,14 @@ class Conto  {
       switch(categoria) {
           case "1": value = { id: 1, nome: "FANTASIA" }
            break;
+
           case "2": value = { id: 2, nome: "AVENTURA" };
            break;
+
           case "3": value = { id: 3, nome: "AÇÃO" };
+           break;
+
+           default: value = "";
       }
       return value;
     }

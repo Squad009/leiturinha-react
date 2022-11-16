@@ -21,8 +21,8 @@ function App() {
         <Route path='/' element={<BaseApp />}>
           <Route index element={<InicioLayout />} />
           <Route path='criar_conto' element={<CriaContaLayout />} />
-          <Route path='conteudo_professor' element={<ConteudoProfessorLayout />} />
-          <Route path='Criar_conteudo_professor' element={<CriarConteudoProfessor />} />
+          <Route path='conteudo_professor/:id' element={<ConteudoProfessorLayout />} />
+          <Route path='criar_conteudo_professor' element={<CriarConteudoProfessor />} />
           <Route path='cria_quiz' element={<CriaQuizLayout />} />
           <Route path='quizzes' element={<QuizzesLayout />} />
           <Route path='tela_realizar_quiz' element={<RealizaQuizLayout />} />
