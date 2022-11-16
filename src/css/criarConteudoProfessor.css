@@ -1,0 +1,44 @@
+#texto{
+    width: 90%;
+    height: 470px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    
+    border-color: #F2622E;
+}
+
+#titulo{
+    width: 90%;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #03A65A;
+    padding: 1.25rem;
+}
+
+#negrito, #italico{
+    border-style: solid;
+    border-color: #1E4DD9;
+   
+   
+}
+
+
+#esquerda, #botao, #centro{
+    border-style: solid;
+    border-color: #1E4DD9;
+}
+
+
+#apagarTexto {
+    border-style: solid;
+    border-color: #1E4DD9;
+   
+}
+
+#maiuscula, #minuscula, #maimin{
+    border-style: solid;
+    border-color: #1E4DD9;
+}
+

@@ -2,6 +2,8 @@ import CadastrarAluno from "../../models/CadastrarAluno";
 import CadastroAlunoService from "../../services/CadastroAlunoService";
 
 export default function CadastroAluno({setIsStudent}) {
+    const navigate = useNavigate();
+    
     function closeModal() {
         setIsStudent(false);
     }
@@ -15,7 +17,7 @@ export default function CadastroAluno({setIsStudent}) {
         
         const cadastroService = new CadastroAlunoService()
         cadastroService.save(newUser)
-        
+
     }
 
     return(
@@ -46,19 +48,19 @@ export default function CadastroAluno({setIsStudent}) {
                             </div>
                             <div className="form-group">
                                 <label htmlFor="password">Senha</label>
-                                <input type="password" className="form-control" id="password" placeholder="**********" required/>
+                                <input type="password" name="password" className="form-control" id="password" placeholder="**********" required/>
                             </div>
                             {/* <div className="form-group">
                                 <label htmlFor="repeatPassword">Repita a senha</label>
                                 <input type="password" className="form-control" id="repeatPassword" placeholder="**********" required/>
                             </div> */}
+
                             <div className="modal-footer teacher-modal-footer">
                                 <button type="submit" className="btn btn-success">Cadastrar</button>
                                 <a href="#">Já tem uma conta? Faça login!!</a>
                             </div>
                         </form>
-                    </div>
-                    
+                    </div>  
                 </div>
             </div>
         </div>

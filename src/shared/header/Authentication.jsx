@@ -1,7 +1,7 @@
 function Authentication({setRegisterButton}) {
 
     function openModal() {
-        setRegisterButton(true)
+        setRegisterButton(true);
     }
 
     return(

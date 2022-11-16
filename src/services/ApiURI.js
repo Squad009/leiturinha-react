@@ -6,6 +6,8 @@ const PROFESSOR_EP = "professor";
 const PROFESSORES_EP = "professores";
 const ALUNO_EP = "estudante";
 const ALUNOS_EP = "estudantes";
+const COMENTARIO_MATERIAL_EP = "comentario_material";
+const COMENTARIO_CONTO_EP = "comentario_conto";
 
 
 export {
@@ -16,5 +18,6 @@ export {
     PROFESSORES_EP,
     ALUNO_EP,
     ALUNOS_EP
-
+    COMENTARIO_MATERIAL_EP,
+    COMENTARIO_CONTO_EP
 }
