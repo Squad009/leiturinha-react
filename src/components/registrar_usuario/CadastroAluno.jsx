@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import dataRegisteredUser from "../../shared/mockedData/dataUser";
+import CadastrarAluno from "../../models/CadastrarAluno";
+import CadastroAlunoService from "../../services/CadastroAlunoService";
 
 export default function CadastroAluno({setIsStudent}) {
     const navigate = useNavigate();
@@ -9,18 +9,19 @@ export default function CadastroAluno({setIsStudent}) {
     }
 
     function handleNewUser(e) {
-        e.preventDefault();
+        const newUser = new CadastrarAluno(
+            e.currentTarget.elements.alunoName.value,
+            e.currentTarget.elements.alunoEmail.value,
+            e.currentTarget.elements.alunoDataofBirth.value,
+            e.currentTarget.elements.password.value)
+        
+        const cadastroService = new CadastroAlunoService()
+        cadastroService.save(newUser)
 
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData);
-
-        dataRegisteredUser.push(data);
-
-        navigate("/perfil_aluno");
     }
 
     return(
-        <div className="modal fade show" id="modalRegistrarProfessor" role="dialog">
+        <div className="modal fade show" id="modalRegistrarAluno" role="dialog">
             <div className="modal-dialog teacher-modal" role="document">
                 <div className="modal-content teacher-modal-content">
                     <div className="modal-header teacher-modal-header">
@@ -34,35 +35,32 @@ export default function CadastroAluno({setIsStudent}) {
                     <div className="modal-body teacher-modal-body">
                         <form className="form" onSubmit={handleNewUser}>
                             <div className="form-group">
-                                <label htmlFor="teacherName">Nome Completo</label>
-                                <input type="text" name="fullName" className="form-control" id="teacherName" aria-describedby="nameHelp" placeholder="Ex.: João da Silva" required/>
+                                <label htmlFor="alunoName">Nome Completo</label>
+                                <input type="text" className="form-control" id="alunoName" aria-describedby="nameHelp" placeholder="Ex.: João da Silva" required/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="teacherDateofBirth">Data de Nascimento</label>
-                                <input type="date" name="dateOfBirth" className="form-control" id="teacherDataofBirth" aria-describedby="dateofBirthHelp" required/>
+                                <label htmlFor="alunoDateofBirth">Data de Nascimento</label>
+                                <input type="date" className="form-control" id="alunoDataofBirth" aria-describedby="dateofBirthHelp" required/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="teacherEmail">E-mail</label>
-                                <input type="email" name="email" className="form-control" id="teacherEmail" aria-describedby="emailHelp" placeholder="Ex.: joao.silva@email.com" required/>
+                                <label htmlFor="alunoEmail">E-mail</label>
+                                <input type="email" className="form-control" id="alunoEmail" aria-describedby="emailHelp" placeholder="Ex.: joao.silva@email.com" required/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="password">Senha</label>
                                 <input type="password" name="password" className="form-control" id="password" placeholder="**********" required/>
                             </div>
-                            <div className="form-group">
+                            {/* <div className="form-group">
                                 <label htmlFor="repeatPassword">Repita a senha</label>
-                                <input type="password" name="repeatPassword" className="form-control" id="repeatPassword" placeholder="**********" required/>
-                            </div>
+                                <input type="password" className="form-control" id="repeatPassword" placeholder="**********" required/>
+                            </div> */}
+
                             <div className="modal-footer teacher-modal-footer">
                                 <button type="submit" className="btn btn-success">Cadastrar</button>
                                 <a href="#">Já tem uma conta? Faça login!!</a>
                             </div>
                         </form>
-                    </div>
-                    {/* <div className="modal-footer teacher-modal-footer">
-                        <button type="submit" className="btn btn-success">Cadastrar</button>
-                        <a href="#">Já tem uma conta? Faça login!!</a>
-                    </div> */}
+                    </div>  
                 </div>
             </div>
         </div>
