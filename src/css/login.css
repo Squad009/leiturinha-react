@@ -1,0 +1,30 @@
+.box-login {
+    background-color: rgb(238, 240, 247, 0.8);
+    width: 40%;
+    display: block;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px #333;
+    padding: 2%;
+    font-family: 'Quicksand', sans-serif
+    ;
+}
+.logo-position {
+    text-align: center;
+}
+h2 {
+    
+    text-align: center;
+    color: #f2622e;
+    font-size:larger;
+    
+}
+
+.content {
+    background-image: linear-gradient(to bottom, #1e4dd9 0%, #a62e7c 100%);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}

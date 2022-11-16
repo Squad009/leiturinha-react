@@ -8,7 +8,7 @@ function Authentication({setRegisterButton}) {
         <div className="text-end">
             <a
                 type="button"
-                href="/login.html"
+                href="/login"
                 className="btn btn-outline-light me-2 b"
                 role="button"
             >
