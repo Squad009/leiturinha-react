@@ -1,7 +1,7 @@
 const carrossel = [
     {
         id: 1,
-        tituloCarrossel: "Top 5 - Leituras Nacionais",
+        tituloCarrossel: "Top 5 - Aventura",
         livro1:"Meu pé de laranja lima",
         autor1:"José Mauro de Vasconcelos",
         livro2:"Amoras",
@@ -16,7 +16,7 @@ const carrossel = [
     },
     {
         id: 2,
-        tituloCarrossel: "Top 5 - Leituras Internacionais",
+        tituloCarrossel: "Top 5 - Fantasia",
         livro1:"O pequeno príncipe",
         autor1:"Antoine de Saint-Exupéry",
         livro2:"Coraline",
@@ -37,11 +37,11 @@ function Item(props){
 
     return(
         <div className="container">
-            <h4 class="titulo-top-nacional title_font margem_titulo">{item.tituloCarrossel}</h4>
-            <div class="card">
-                <div id="carroselNacional" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carroselNacional" data-bs-slide-to="0" class="active"
+            <h4 className="titulo-top-nacional title_font margem_titulo">{item.tituloCarrossel}</h4>
+            <div className="card">
+                <div id="carroselNacional" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carroselNacional" data-bs-slide-to="0" className="active"
                     aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carroselNacional" data-bs-slide-to="1"
                     aria-label="Slide 2"></button>
@@ -52,56 +52,56 @@ function Item(props){
                     <button type="button" data-bs-target="#carroselNacional" data-bs-slide-to="4"
                     aria-label="Slide 5"></button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                    <img src="..." class="d-block w-100 carousel-posicao-imagem" alt="..."/>
-                    <div class="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                    <img src="..." className="d-block w-100 carousel-posicao-imagem" alt="..."/>
+                    <div className="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
                         <h5>{item.livro1}</h5>
                         <p>{item.autor1}</p>
                     </div>
                     </div>
-                    <div class="carousel-item">
-                    <img src="./img/amoras.jpg" class="d-block w-100 carousel-posicao-imagem" alt="..."/>
-                    <div class="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
+                    <div className="carousel-item">
+                    <img src="./img/amoras.jpg" className="d-block w-100 carousel-posicao-imagem" alt="..."/>
+                    <div className="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
                         <h5>{item.livro2}</h5>
                         <p>{item.autor2}</p>
                     </div>
                     </div>
-                    <div class="carousel-item">
-                    <img src="./img/daminhajanela.jpg" class="d-block w-100 carousel-posicao-imagem" alt="..."/>
-                    <div class="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
+                    <div className="carousel-item">
+                    <img src="./img/daminhajanela.jpg" className="d-block w-100 carousel-posicao-imagem" alt="..."/>
+                    <div className="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
                         <h5>{item.livro3}</h5>
                         <p>{item.autor3}</p>
                     </div>
                     </div>
-                    <div class="carousel-item">
-                    <img src="./img/meninotinhamedodeerrar.jpg" class="d-block w-100 carousel-posicao-imagem" alt="..."/>
-                    <div class="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
+                    <div className="carousel-item">
+                    <img src="./img/meninotinhamedodeerrar.jpg" className="d-block w-100 carousel-posicao-imagem" alt="..."/>
+                    <div className="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
                         <h5>{item.livro4}</h5>
                         <p>{item.autor4}</p>
                     </div>
                     </div>
-                    <div class="carousel-item">
-                    <img src="./img/colchaderetalhos.jpg" class="d-block w-100 carousel-posicao-imagem" alt="..."/>
-                    <div class="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
+                    <div className="carousel-item">
+                    <img src="./img/colchaderetalhos.jpg" className="d-block w-100 carousel-posicao-imagem" alt="..."/>
+                    <div className="carousel-caption d-none d-md-block legenda-carrossel bg-legenda-nacional">
                         <h5>{item.livro5}</h5>
                         <p>{item.autor5}</p>
                     </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carroselNacional"
+                <button className="carousel-control-prev" type="button" data-bs-target="#carroselNacional"
                     data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carroselNacional"
+                <button className="carousel-control-next" type="button" data-bs-target="#carroselNacional"
                     data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
                 </button>
                 </div>
-                <div class="card-body">
-                <p class="card-text">{item.legenda}</p>
+                <div className="card-body">
+                <p className="card-text">{item.legenda}</p>
                 </div>
             </div>
         </div>
