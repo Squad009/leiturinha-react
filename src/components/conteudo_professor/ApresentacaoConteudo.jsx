@@ -29,7 +29,7 @@ class ApresentacaoConteudo extends Component {
                     <p style={{fontSize: ".8rem"}}><em>04 de Agosto</em></p>
                 </div>
                 <div className="container">
-                    <h2 className="title_font text-center">{this.state.material.titulo}</h2>
+                    <h2 className="title_font text-center fs-1">{this.state.material.titulo}</h2>
                     <figure>
                         <img className="p-3" src={`data:image/jpeg;base64,${this.state.material.imagemConteudo}`} width="100%"
                             alt="Imagem descritiva do conteúdo" />

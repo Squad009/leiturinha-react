@@ -37,7 +37,9 @@ class ContoService extends Service {
     }
 
     async findById(id) {
-        return fetch(`${BASE_URL}${CONTOS_EP}/${CONTO_EP}?id=${id}`)
+        if(id.includes("?")) id.replace("?", "");
+        this.receivedId = Number.parseInt(id);
+        return fetch(`${BASE_URL}${CONTOS_EP}/${CONTO_EP}?id=${this.receivedId}`)
             .then(res => {
                 this.isFailure(res);
                 this.isNotFound(res, `Ops... não foi possível encontrar o caminho solicitado / status code: ${res.status}`);

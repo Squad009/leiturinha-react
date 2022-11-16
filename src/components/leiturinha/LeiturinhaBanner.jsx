@@ -17,7 +17,7 @@ class LeiturinhaBanner extends React.Component{
                     </div>
 
                     <div>
-                    <Link to="criar_conto" className="btn button_app_primary mr-3"> Compartilhe sua história</Link>
+                    <Link to="/criar_conto" className="btn button_app_primary mr-3"> Compartilhe sua história</Link>
                     </div>
 
                 </div>

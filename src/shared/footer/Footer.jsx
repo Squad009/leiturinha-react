@@ -9,13 +9,13 @@ class Footer extends Component {
             
             <footer>
                 <div style={{height: 100}}>
-                    <img src="acabamento-footer.webp" height="100%" width="100%" alt="desenho de acabamento do rodapé" />
+                    <img src="../../acabamento-footer.webp" height="100%" width="100%" alt="desenho de acabamento do rodapé" />
                 </div>
                 <div className="container-fluid d-flex flex-wrap justify-content-between align-items-center py-3 footer_app">
                     <div className="acabamento_footer"></div>
                     <div className="col-md-4 d-flex align-items-center">
                         <a href="/" className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                            <img src="log-temp-projeto.png" className="bi" width="30" height="24" alt="logo do site"/>
+                            <img src="../../log-temp-projeto.png" className="bi" width="30" height="24" alt="logo do site"/>
                         </a>
                         <span className="mb-3 mb-md-0 text-white">&copy; 2022 Lets, Inc</span>
                     </div>

@@ -9,7 +9,7 @@ class NavigationMain extends Component {
         return(
             <>
                 <Link to="/" className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                        <img src="log-temp-projeto.png" className="bi me-2" width="50" height="40"
+                        <img src="../../log-temp-projeto.png" className="bi me-2" width="50" height="40"
                             aria-label="LogoApp"></img>
                 </Link>
 
@@ -17,7 +17,7 @@ class NavigationMain extends Component {
                     <li><Link to="/" className="nav-link px-2 text-white">Home</Link></li>
                     <li><Link to="/leiturinhas" className="nav-link px-2 text-white">Leiturinhas</Link></li>
                     <li><Link to="/quizzes" className="nav-link px-2 text-white">Quizzes</Link></li>
-                    <li><Link to="/sobre_projeto" className="nav-link px-2 text-white">Conheça a iniciativa</Link></li>.
+                    <li><Link to="/sobre_projeto" className="nav-link px-2 text-white">Conheça a iniciativa</Link></li>
                 </ul>
             </>
         );

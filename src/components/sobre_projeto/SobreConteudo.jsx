@@ -7,7 +7,7 @@ export default class SobreConteudo extends React.Component{
         return(
             <section className="container">
                 <div className="row justify-content-center">
-                    <div className="card card-sobre text-white w-50" style={{backgroundColor : '#03A65A'}}>
+                    <div className="card card-sobre text-white w-50 m-5" style={{backgroundColor : '#03A65A'}}>
                         <h2 className="title_font">Bem vindo ao Leio, Logo Existo!</h2>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ export default class SobreConteudo extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div className="row justify-content-center">
+                <div className="row justify-content-center m-5">
                     <div className="card card-sobre text-success w-75" style={{borderColor : '#03A65A'}}>
                     <div className="card-body">
                             <h2 className="title_font text-center">Idealizadores</h2>
