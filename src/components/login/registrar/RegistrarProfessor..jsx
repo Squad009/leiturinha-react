@@ -47,9 +47,9 @@ return(
 <div className="content">
     <section className='containter-fluid p-3 w-100'>
     <form className='fundo-criativo  box-login'>
-      <h2>
+      <div className='titulo1' >
         Cadastro do Professor
-      </h2>
+      </div>
       <label className='form-label col-12' htmlFor='nomeProfessor'>
         Nome
         <input className='form-control' value={professor} onChange={(e)=> setProfessor(e.target.value)} id='nomeProfessor' type='text' placeholder='ex.: João da Silva' />
