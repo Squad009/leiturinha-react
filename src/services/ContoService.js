@@ -1,4 +1,4 @@
-import { BASE_URL, CONTOS_EP, CONTO_EP } from './ApiURI';
+import { BASE_URL, CATEGORIA_EP, CONTOS_EP, CONTO_EP } from './ApiURI';
 import Service from './Service';
 
 
@@ -48,6 +48,20 @@ class ContoService extends Service {
             })
             .catch(error => {
                 throw new Error(`Ocorreu um erro ao tentar recuparar o conto com o id: ${id} / error: ${error.message}`);
+            })
+    }
+
+    async findByCategoria(categoriaId) {
+          
+        return fetch(`${BASE_URL}${CONTOS_EP}/${CATEGORIA_EP}?id_categoria=${categoriaId}`)
+            .then(res => {
+                this.isFailure(res);
+                this.isNotFound(res, `Ops... não foi possível encontrar o caminho solicitado / status code: ${res.status}`);
+
+                return res.json();
+            })
+            .catch(error => {
+                throw new Error(`Ocorreu um erro ao tentar recuparar o conto com o id da categoria: ${categoriaId} / error: ${error.message}`);
             })
     }
 

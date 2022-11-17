@@ -1,5 +1,5 @@
 
-const BASE_URL = "http://localhost:8081/";
+const BASE_URL = "https://leiturinha-api.herokuapp.com/";
 const CONTOS_EP = "contos";
 const CONTO_EP = "conto";
 const PROFESSOR_EP = "professor";
@@ -9,7 +9,8 @@ const ALUNOS_EP = "estudantes";
 const COMENTARIO_MATERIAL_EP = "comentario_material";
 const COMENTARIO_CONTO_EP = "comentario_conto";
 const MATERIAIS_EP = "materiais";
-const MATERIAL_EP = "material"
+const MATERIAL_EP = "material";
+const CATEGORIA_EP = "cat";
 
 
 export {
@@ -23,5 +24,6 @@ export {
     COMENTARIO_MATERIAL_EP,
     COMENTARIO_CONTO_EP,
     MATERIAIS_EP,
-    MATERIAL_EP
+    MATERIAL_EP,
+    CATEGORIA_EP
 }

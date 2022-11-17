@@ -67,7 +67,7 @@ export default function RegistrarEstudante()
         <div class="content">
             <section className='containter-fluid p-3 w-100'>
                 <form className='fundo-criativo box-login'>
-                    <h2>
+                    <h2 id="title_login">
                         Cadastro do Aluno
                     </h2>
                     <label className='form-label col-12' htmlFor='dataNascimento'>
