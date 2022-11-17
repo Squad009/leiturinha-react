@@ -13,11 +13,12 @@
 .logo-position {
     text-align: center;
 }
-h2 {
+.titulo1 {
     
     text-align: center;
     color: #f2622e;
     font-size:larger;
+    font-weight: bold;
     
 }
 

@@ -67,9 +67,9 @@ export default function RegistrarEstudante()
         <div class="content">
             <section className='containter-fluid p-3 w-100'>
                 <form className='fundo-criativo box-login'>
-                    <h2>
+                    <div className='titulo1'>
                         Cadastro do Aluno
-                    </h2>
+                    </div>
                     <label className='form-label col-12' htmlFor='dataNascimento'>
                         Data de Nascimento
                         <input className='form-control' value={dataNascimento} onChange={(e) => setDataNascimento(e.target.value)} id='dataNascimento' type='date' />
